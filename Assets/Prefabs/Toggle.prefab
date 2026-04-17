@@ -255,7 +255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568629044637399025, guid: 34147271465a19344930685568ef54d3, type: 3}
       propertyPath: m_margin.x
-      value: -71.35959
+      value: -20.642578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568629044637399025, guid: 34147271465a19344930685568ef54d3, type: 3}
+      propertyPath: m_margin.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4819642524167034875, guid: 34147271465a19344930685568ef54d3, type: 3}
       propertyPath: m_Pivot.x
