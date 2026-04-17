@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - TestObject
+  - TargetObject
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Object
   - Water
   - UI
   - 
