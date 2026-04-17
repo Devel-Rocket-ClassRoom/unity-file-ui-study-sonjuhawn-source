@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class KeyboardWindow : GenericWindow
 {
     //public Button[] quartyButton;
-    //public Button cancelButton;
-    //public Button deleteButton;
-    //public Button acceptButton;
+    public Button cancelButton;
+    public Button deleteButton;
+    public Button acceptButton;
 
     public TextMeshProUGUI inputField;
     public GameObject rootKeyboard;
@@ -23,9 +23,9 @@ public class KeyboardWindow : GenericWindow
 
     private void Awake()
     {
-        //cancelButton.onClick.AddListener(Cancel);
-        //deleteButton.onClick.AddListener(Delete);
-        ////acceptButton.onClick.AddListener();
+        cancelButton.onClick.AddListener(Cancel);
+        deleteButton.onClick.AddListener(Delete);
+        acceptButton.onClick.AddListener(Accept);
         //Typing();
         //StartCoroutine(Cursor());
 
@@ -98,7 +98,7 @@ public class KeyboardWindow : GenericWindow
     }
     public void Accept()
     {
-        windowManager.Open(1);
+        windowManager.Open(2);
     }
 
     //private void Typing()

@@ -66,7 +66,7 @@ public class GameOverWindow : GenericWindow
 
     private void OnNext()
     {
-        windowManager.Open(0);
+        windowManager.Open(2);
     }
 
 
