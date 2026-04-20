@@ -53,7 +53,6 @@ public class KeyboardWindow : GenericWindow
         headerstring.Clear();
         timer = 0f;
         blink = false;
-        base.Open();
         UpdateInputField();
     }
 

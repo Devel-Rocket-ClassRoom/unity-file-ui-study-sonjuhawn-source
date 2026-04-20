@@ -11,7 +11,7 @@ public static class SaveLoadManager
         Encrypted,          // AES 암호화 바이너리(.dat) - 릴리즈용
     }
 
-    public static SaveMode Mode {  get; set; } = SaveMode.Encrypted;
+    public static SaveMode Mode {  get; set; } = SaveMode.Text;
 
     private static readonly string SaveDirectory = $"{Application.persistentDataPath}/Save";
 

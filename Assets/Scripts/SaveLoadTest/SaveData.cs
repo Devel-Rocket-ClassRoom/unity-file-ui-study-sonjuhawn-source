@@ -52,6 +52,30 @@ public class SaveDataV3 : SaveData
 
     public override SaveData VersionUp()
     {
+        var saveData = new SaveDataV4();
+        saveData.Name = Name;
+        saveData.Gold = Gold;
+        foreach (var item in ItemIds)
+        {
+            SaveItemData data = new SaveItemData()
+            {
+                ItemData = DataTableManager.ItemTable.Get(item)
+            };
+            saveData.ItemIds.Add(data);
+        }
+
+        return saveData;
+    }
+}
+
+public class SaveDataV4 : SaveDataV2
+{
+    public List<SaveItemData> ItemIds = new List<SaveItemData>();  // ItemTable의 ItemId만 저장
+
+    public SaveDataV4() { Version = 4; }
+
+    public override SaveData VersionUp()
+    {
         throw new System.NotImplementedException();
     }
 }

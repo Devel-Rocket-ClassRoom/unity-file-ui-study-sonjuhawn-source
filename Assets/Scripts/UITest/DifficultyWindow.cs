@@ -69,7 +69,7 @@ public class DifficultyWindow : GenericWindow
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
-            using (FileStream fs = new FileStream(Path.Combine(path, "Difficult"), FileMode.Create))
+            using (FileStream fs = new FileStream(Path.Combine(path, "Difficult.json"), FileMode.Create))
             {
                 File.WriteAllText(Path.Combine(path, "Difficult"), $"{difficulty}");
             }

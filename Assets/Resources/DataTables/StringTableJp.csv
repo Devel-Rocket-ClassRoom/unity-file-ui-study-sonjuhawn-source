@@ -11,13 +11,11 @@ Item1Desc,これは剣だ。
 Item2Desc,これは盾だ。
 Item3Desc,これは弓だ。
 Item4Desc,これはポーションだ。
-Character1Name,せんし
-Character2Name,まほうつかい
-Character3Name,えるふ
-Character4Name,ひーらー
-Char1Desc,それは私には答えられません.
-Char2Desc,これはただのマジシャンです.
-Char3Desc,これはただのエルフです.
-Char4Desc,これはただのヒーラーです.
-AttackFormat,こうげきりょく: {0}
-IqFormat,ちのう: {0}
+NAME,名前
+DESC,説明
+TYPE,タイプ
+VALUE,値
+COST,コスト
+WEAPON,武器
+EQUIP,装備
+CONSUMABLE,消費品
