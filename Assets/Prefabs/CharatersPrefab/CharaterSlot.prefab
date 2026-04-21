@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 77783224828784408}
   - component: {fileID: 5800439326171246555}
   - component: {fileID: 7649432852395823956}
-  - component: {fileID: 3959365482943141535}
+  - component: {fileID: 8203748549963929729}
   m_Layer: 5
   m_Name: CharaterSlot
   m_TagString: Untagged
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &3959365482943141535
+--- !u!114 &8203748549963929729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
