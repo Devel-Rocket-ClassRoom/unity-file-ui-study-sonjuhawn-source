@@ -61,7 +61,7 @@ public class SaveDataV3 : SaveData
             {
                 ItemData = DataTableManager.ItemTable.Get(item)
             };
-            saveData.ItemIds.Add(data);
+            saveData.ItemList.Add(data);
         }
 
         return saveData;
@@ -70,7 +70,9 @@ public class SaveDataV3 : SaveData
 
 public class SaveDataV4 : SaveDataV2
 {
-    public List<SaveItemData> ItemIds = new List<SaveItemData>();  // ItemTable의 ItemId만 저장
+    public List<SaveItemData> ItemList = new List<SaveItemData>();  // ItemTable의 ItemId만 저장
+    //public UiInvenSlotList.SortingOptions ItemSorting = uiinv
+
 
     public SaveDataV4() { Version = 4; }
 

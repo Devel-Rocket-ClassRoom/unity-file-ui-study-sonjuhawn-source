@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class SaveItemData
 {
-    public Guid instanceId {  get; set; }
+    public Guid InstanceId {  get; set; }
     
     [JsonConverter(typeof(ItemDataConverter))]
 
@@ -21,7 +21,12 @@ public class SaveItemData
 
     public SaveItemData()
     {
-        instanceId = Guid.NewGuid();
+        InstanceId = Guid.NewGuid();
         creationTIme = DateTime.Now;
+    }
+
+    public override string ToString()
+    {
+        return $"{InstanceId}{creationTIme}{ItemData}";
     }
 }

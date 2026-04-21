@@ -156,6 +156,7 @@ public class LocalizationText : MonoBehaviour
     public void OnChangedId()
     {
         text.text = DataTableManager.StringTable.Get(id);
+        Debug.Log(DataTableManager.StringTable.Get(id));
     }
 
     private void OnChangedLanguage()

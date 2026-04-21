@@ -1,30 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UiInvenSlotList : MonoBehaviour
+public class CharacterSlotList : MonoBehaviour
 {
-    public enum SortingOptions
-    {
-        CreationTimeAscending,
-        CreationTimeDescending,
-        NameAsscending,
-        NameDeaccending,
-        CostAcsending,
-        ConstDecsending
-    }
-
-    public enum FilteringOptions
-    {
-        None,
-        Weapon,
-        Equip,
-        Consumable,
-    }
-
     public readonly System.Comparison<SaveItemData>[] comparisons =
     {
         (lhs, rhs) => lhs.creationTIme.CompareTo(rhs.creationTIme),
@@ -46,39 +26,9 @@ public class UiInvenSlotList : MonoBehaviour
         (x) => x.ItemData.Type != ItemTypes.Consumable,
     };
 
-    private List<UiInventor> uiSlotList = new List<UiInventor>();
+    private List<CharacterInven> uiSlotList = new List<CharacterInven>();
 
     private List<SaveItemData> saveItemDataList = new List<SaveItemData>();
-
-    private SortingOptions sortring = SortingOptions.CreationTimeAscending;
-
-    private FilteringOptions filtering = FilteringOptions.None;
-
-    public SortingOptions Sorting
-    {
-        get => sortring;
-        set
-        {
-            if (sortring != value)
-            {
-                sortring = value;
-                UpdateSlots();
-            }
-        }
-    }
-
-    public FilteringOptions Filtering
-    {
-        get => filtering;
-        set
-        {
-            if (filtering != value)
-            {
-                filtering = value;
-                UpdateSlots();
-            }
-        }
-    }
 
     private int selectedSlotIndex = -1;
 
@@ -148,7 +98,7 @@ public class UiInvenSlotList : MonoBehaviour
 
     private void OnSelectSlot(SaveItemData saveItemData)
     {
-        prefab1.SetSaveItemData(saveItemData);  
+        prefab1.SetSaveItemData(saveItemData);
     }
 
 
@@ -202,12 +152,12 @@ public class UiInvenSlotList : MonoBehaviour
 
     public void RemoveItem()
     {
-        if(selectedSlotIndex == -1)
+        if (selectedSlotIndex == -1)
         {
             return;
         }
 
-        saveItemDataList.Remove(uiSlotList[selectedSlotIndex].SaveItemData);
+        saveItemDataList.Remove(uiSlotList[selectedSlotIndex].SaveCharacterData);
         UpdateSlots();
     }
 
@@ -222,5 +172,5 @@ public class UiInvenSlotList : MonoBehaviour
     //            newInven.SetItem(saveItemData);
     //        }
     //    }
+    //}
 }
-

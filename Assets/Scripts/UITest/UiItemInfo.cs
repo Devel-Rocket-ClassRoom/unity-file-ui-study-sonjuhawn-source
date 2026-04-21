@@ -44,16 +44,16 @@ public class UiItemInfo : MonoBehaviour
             string.Format(FormatCommon, DataTableManager.StringTable.Get("COST"), data.Cost);
     }
 
-    public void Updata()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SetEmpty();
-        }
+    //public void Updata()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Alpha1))
+    //    {
+    //        SetEmpty();
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SetSaveItemData(SaveItemData.GetRandomItem());
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.Alpha2))
+    //    {
+    //        SetSaveItemData(SaveItemData.GetRandomItem());
+    //    }
+    //}
 }
